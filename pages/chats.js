@@ -3,6 +3,7 @@ import { Context } from "../context/index";
 import { useRouter } from "next/dist/client/router";
 import dynamic from "next/dynamic";
 import { ChatEngine } from "react-chat-engine";
+import { IsTyping } from "react-chat-engine";
 
 const chatEngine = dynamic(() =>
   import("react-chat-engine").then((module) => module.ChatEngine)
@@ -37,11 +38,13 @@ export default function Chats() {
     <div className="background">
       <div className="shadow">
         <ChatEngine
-          height="calc(100vh - 200px)"
+          height="100vh"
           projectID="389b18e8-b05e-4490-b096-1062ac9a0f88"
           userName={username}
           userSecret={secret}
           renderNewMessageForm={() => <MessageFormSocial />}
+          offset={5.3}
+          renderIsTyping={() => <IsTyping />}
         />
       </div>
     </div>

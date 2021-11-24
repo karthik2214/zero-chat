@@ -1,10 +1,19 @@
 .background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 72.9rem;
+  height: 27rem;
+  background: linear-gradient(150deg, #d9dbe2, #808aac 100%, #282d39 0);
+}
+
+.login {
   padding: 100px;
   position: absolute;
   top: 0px;
   left: 0px;
-  width: calc(100vw - 200px);
-  height: calc(100vh - 200px);
+  width: 72.9rem;
+  height: 27rem;
   background: linear-gradient(150deg, #d9dbe2, #808aac 100%, #282d39 0);
 }
 
@@ -62,3 +71,4 @@
 .submit-button::hover {
   background-color: #938ffe;
 }
+
